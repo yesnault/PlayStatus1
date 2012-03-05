@@ -1,12 +1,15 @@
 
 Plugin JQuery
+-------------
+
 A simple JQuery Plugin to display HTML with a JSON Play Framework Status in input.
+/!\ Play Framework 1.x (not 2.0)
 
 Use
 ---
 
 ### The Controller (example : Application.java)
-
+```
    package controllers;
 
    import play.CorePlugin;
@@ -24,9 +27,10 @@ Use
        }
 
    }
+```
 
 ### The view (example : index.phtml) :
-
+```
    #{extends 'main.html' /}
    #{set title:'Play Application Status' /}
 
@@ -43,11 +47,12 @@ Use
        </script>
    #{/set}
 
-<div id="status"></div>
-
+   <div id="status"></div>
+```
 
 ### The HTML Output
 
+```
    <div id="status">
 
        Java :
@@ -75,3 +80,4 @@ Use
             [...]
        </table>
    </div>
+```
