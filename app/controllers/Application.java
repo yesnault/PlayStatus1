@@ -1,16 +1,17 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
-
-import java.util.*;
-
-import models.*;
+import play.CorePlugin;
+import play.mvc.Controller;
 
 public class Application extends Controller {
 
     public static void index() {
         render();
+    }
+
+    public static void json() {
+        String json = CorePlugin.computeApplicationStatus(true);
+        renderJSON(json);
     }
 
 }

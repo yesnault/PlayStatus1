@@ -1,4 +1,19 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'Play Application Status' /}
 
-#{welcome /}
+#{set 'moreScripts'}
+    <script type="text/javascript" src="@{'/public/javascripts/status2html.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var listAction = #{jsAction @json() /}
+            $.getJSON(listAction(), function(data) {
+                 $('#status').status2html(data);
+            });
+        });
+    </script>
+
+
+#{/set}
+
+<div id="status"></div>
