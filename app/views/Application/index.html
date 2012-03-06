@@ -2,7 +2,7 @@
 #{set title:'Play Application Status' /}
 
 #{set 'moreScripts'}
-    <script type="text/javascript" src="@{'/public/javascripts/status2html.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    #{script 'jquery.status2html.js'/}
 
     <script type="text/javascript">
         $(document).ready(function() {
