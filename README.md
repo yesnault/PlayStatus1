@@ -81,3 +81,6 @@ Use
        </table>
    </div>
 ```
+
+### Licence
+LGPL v3
