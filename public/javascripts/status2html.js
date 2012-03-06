@@ -1,6 +1,5 @@
 
 
-
 (function($){	
 
 	//Main method
@@ -32,7 +31,7 @@
        var str = "Application : ";
        str += "<ul>Path : " + JSON["application"]["path"] + "</ul>";
        str += "<ul>Uptime : " + JSON["application"]["uptime"] + "ms</ul>";
-       str += "<ul>Started at : " + new Date().setTime(JSON["application"]["uptime"]).toLocaleString() + "</ul>";
+       str += "<ul>Started at : " + new Date(new Date().getTime() - JSON["application"]["uptime"]).toLocaleString() + "</ul>";
        return str;
     }
 
